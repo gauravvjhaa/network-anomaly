@@ -1,0 +1,427 @@
+FULL LOGS
+
+[    0.0s |  7346.0MB] 
+==============================
+Loading dataset
+==============================
+[    4.8s |  7807.5MB] Initial shape: (555278, 88)
+[    4.8s |  7807.5MB] Detected label column: Label
+[    5.5s |  7830.6MB] No explicit normal token; using majority label '0' as normal.
+[    5.5s |  7830.6MB] Binary label distribution:
+is_attack
+0    517582
+1     37696
+Name: count, dtype: int64
+[    5.5s |  7809.1MB] Numeric feature selection -> 56 columns
+[    5.5s |  7809.1MB] Starting robust clean on features...
+[    6.0s |  7811.2MB] NaNs before fill: 0
+[    6.5s |  7811.2MB] NaNs after fill: 0
+[    6.9s |  7811.6MB] Final feature list length: 56
+[    6.9s |  7811.6MB] 
+==============================
+Train/Test Split
+==============================
+[    7.7s |  7753.1MB] X_train=(416458, 56), X_test=(138820, 56)
+[    7.7s |  7753.1MB] Train class distribution: [388186  28272] | Test: [129396   9424]
+[    7.8s |  7587.3MB] Normal-only count for AE: 388186
+[    8.6s |  7587.3MB] X_train_norm_s: shape=(388186, 56), dtype=float64, min=-2.1660, max=6.0000, mean=-0.0114, std=0.7254, NaNs=0
+[    8.7s |  7587.3MB] AE train subset: (349367, 56), AE val subset: (38819, 56)
+[    9.6s |  7765.4MB] X_train_sup_s: shape=(416458, 56), dtype=float64, min=-2.1401, max=608.6312, mean=0.0000, std=1.0000, NaNs=0
+[    9.6s |  7765.4MB] 
+========================================
+Cross-Validation Meta Ensemble
+========================================
+[    9.6s |  7765.4MB] 
+==============================
+Fold 1/3
+==============================
+[    9.7s |  7706.1MB] Fold train shape=(277638, 56), val shape=(138820, 56)
+[    9.7s |  7706.1MB] Fold class dist train=[258790  18848], val=[129396   9424]
+[   10.1s |  7695.0MB] Fold AE normal train=(232911, 56), normal val=(25879, 56)
+[   10.1s |  7695.0MB] Building AE (input_dim=56, latent_dim=32, width=128, dropout=0.25)
+[   10.1s |  7695.0MB] AE built successfully.
+[   10.5s |  7894.1MB] AE training started
+[   20.4s |  7226.8MB] Epoch 001/60 loss=0.196638 val_loss=0.028595 mae=0.256001 val_mae=0.074675
+[   22.8s |  7244.5MB] Epoch 002/60 loss=0.057545 val_loss=0.020787 mae=0.135986 val_mae=0.063870
+[   25.2s |  7247.3MB] Epoch 003/60 loss=0.050696 val_loss=0.017599 mae=0.128905 val_mae=0.058975
+[   27.6s |  7250.2MB] Epoch 004/60 loss=0.047255 val_loss=0.016293 mae=0.125258 val_mae=0.056470
+[   30.0s |  7258.0MB] Epoch 005/60 loss=0.045066 val_loss=0.014353 mae=0.122742 val_mae=0.052907
+[   32.4s |  7258.7MB] Epoch 006/60 loss=0.043537 val_loss=0.013396 mae=0.121242 val_mae=0.049903
+[   34.7s |  7259.0MB] Epoch 007/60 loss=0.042356 val_loss=0.011279 mae=0.120083 val_mae=0.048047
+[   37.1s |  7260.5MB] Epoch 008/60 loss=0.041343 val_loss=0.010888 mae=0.118840 val_mae=0.046190
+[   39.4s |  7264.4MB] Epoch 009/60 loss=0.040583 val_loss=0.011204 mae=0.117697 val_mae=0.047228
+[   41.8s |  7265.0MB] Epoch 010/60 loss=0.040348 val_loss=0.010640 mae=0.117375 val_mae=0.046047
+[   44.2s |  7265.5MB] Epoch 011/60 loss=0.039787 val_loss=0.010960 mae=0.116862 val_mae=0.046832
+[   46.6s |  7265.7MB] Epoch 012/60 loss=0.039374 val_loss=0.010297 mae=0.116266 val_mae=0.046660
+[   49.0s |  7268.5MB] Epoch 013/60 loss=0.039160 val_loss=0.009953 mae=0.116096 val_mae=0.043789
+[   51.4s |  7268.8MB] Epoch 014/60 loss=0.038861 val_loss=0.009804 mae=0.115865 val_mae=0.042757
+[   53.8s |  7269.2MB] Epoch 015/60 loss=0.038476 val_loss=0.009651 mae=0.115243 val_mae=0.045076
+[   56.2s |  7269.4MB] Epoch 016/60 loss=0.038314 val_loss=0.009729 mae=0.115061 val_mae=0.044480
+[   58.6s |  7269.7MB] Epoch 017/60 loss=0.038174 val_loss=0.009384 mae=0.114769 val_mae=0.043441
+[   61.0s |  7270.8MB] Epoch 018/60 loss=0.037862 val_loss=0.010254 mae=0.114415 val_mae=0.044678
+[   63.4s |  7271.0MB] Epoch 019/60 loss=0.037961 val_loss=0.009747 mae=0.114475 val_mae=0.045937
+[   65.8s |  7271.2MB] Epoch 020/60 loss=0.037693 val_loss=0.009569 mae=0.114146 val_mae=0.044386
+[   68.3s |  7271.2MB] Epoch 021/60 loss=0.037609 val_loss=0.008645 mae=0.114066 val_mae=0.042988
+[   70.6s |  7272.9MB] Epoch 022/60 loss=0.037404 val_loss=0.008825 mae=0.113724 val_mae=0.042758
+[   73.0s |  7273.3MB] Epoch 023/60 loss=0.037292 val_loss=0.008980 mae=0.113590 val_mae=0.041235
+[   75.4s |  7273.3MB] Epoch 024/60 loss=0.037005 val_loss=0.008978 mae=0.113136 val_mae=0.043467
+[   77.8s |  7273.8MB] Epoch 025/60 loss=0.037245 val_loss=0.008875 mae=0.113309 val_mae=0.042011
+[   80.2s |  7273.9MB] Epoch 026/60 loss=0.036353 val_loss=0.008107 mae=0.111993 val_mae=0.038690
+[   82.6s |  7273.9MB] Epoch 027/60 loss=0.036077 val_loss=0.007916 mae=0.111418 val_mae=0.037815
+[   85.0s |  7273.8MB] Epoch 028/60 loss=0.036130 val_loss=0.008327 mae=0.111209 val_mae=0.039329
+[   87.4s |  7273.9MB] Epoch 029/60 loss=0.036156 val_loss=0.008011 mae=0.111222 val_mae=0.039208
+[   89.8s |  7275.4MB] Epoch 030/60 loss=0.036162 val_loss=0.007974 mae=0.111183 val_mae=0.038020
+[   92.2s |  7275.4MB] Epoch 031/60 loss=0.036079 val_loss=0.007958 mae=0.111007 val_mae=0.038619
+[   94.5s |  7275.4MB] Epoch 032/60 loss=0.035739 val_loss=0.007426 mae=0.110541 val_mae=0.034593
+[   97.0s |  7275.4MB] Epoch 033/60 loss=0.035555 val_loss=0.007239 mae=0.110244 val_mae=0.034203
+[   99.4s |  7275.4MB] Epoch 034/60 loss=0.035587 val_loss=0.007412 mae=0.110330 val_mae=0.034805
+[  101.8s |  7277.5MB] Epoch 035/60 loss=0.035462 val_loss=0.007552 mae=0.110252 val_mae=0.035491
+[  104.2s |  7277.5MB] Epoch 036/60 loss=0.035638 val_loss=0.007520 mae=0.110364 val_mae=0.035840
+[  106.5s |  7277.5MB] Epoch 037/60 loss=0.035550 val_loss=0.007414 mae=0.110307 val_mae=0.034970
+[  109.0s |  7277.6MB] Epoch 038/60 loss=0.035446 val_loss=0.007195 mae=0.110074 val_mae=0.034001
+[  111.3s |  7280.3MB] Epoch 039/60 loss=0.035213 val_loss=0.007217 mae=0.109820 val_mae=0.034295
+[  113.6s |  7280.5MB] Epoch 040/60 loss=0.035246 val_loss=0.007096 mae=0.109810 val_mae=0.033911
+[  116.0s |  7280.5MB] Epoch 041/60 loss=0.035177 val_loss=0.007126 mae=0.109755 val_mae=0.033888
+[  118.3s |  7280.5MB] Epoch 042/60 loss=0.035288 val_loss=0.007178 mae=0.109838 val_mae=0.034074
+[  120.7s |  7281.6MB] Epoch 043/60 loss=0.035235 val_loss=0.007195 mae=0.109780 val_mae=0.034063
+[  123.0s |  7281.8MB] Epoch 044/60 loss=0.035269 val_loss=0.007068 mae=0.109779 val_mae=0.033345
+[  125.4s |  7281.8MB] Epoch 045/60 loss=0.035149 val_loss=0.006867 mae=0.109571 val_mae=0.032963
+[  127.9s |  7281.6MB] Epoch 046/60 loss=0.035215 val_loss=0.006913 mae=0.109604 val_mae=0.033323
+[  130.3s |  7281.8MB] Epoch 047/60 loss=0.035096 val_loss=0.007035 mae=0.109593 val_mae=0.034307
+[  132.7s |  7283.6MB] Epoch 048/60 loss=0.035029 val_loss=0.006967 mae=0.109453 val_mae=0.033472
+[  135.0s |  7283.8MB] Epoch 049/60 loss=0.035238 val_loss=0.007008 mae=0.109591 val_mae=0.033578
+[  137.4s |  7283.8MB] Epoch 050/60 loss=0.035057 val_loss=0.006968 mae=0.109533 val_mae=0.033551
+[  139.8s |  7283.8MB] Epoch 051/60 loss=0.034968 val_loss=0.006920 mae=0.109391 val_mae=0.033466
+[  142.2s |  7285.8MB] Epoch 052/60 loss=0.035002 val_loss=0.006903 mae=0.109420 val_mae=0.033408
+[  144.6s |  7285.8MB] Epoch 053/60 loss=0.035103 val_loss=0.006911 mae=0.109440 val_mae=0.033370
+[  144.6s |  7285.8MB] AE training finished
+[  144.6s |  7186.3MB] AE fold training time: 134.5s
+[  153.2s |  7410.9MB] val_residuals: shape=(138820, 56), dtype=float64, min=-4.0079, max=4.9871, mean=0.0005, std=0.0978, NaNs=0
+[  153.2s |  7410.9MB] recon_mse: shape=(138820,), dtype=float64, min=0.0002, max=1.7434, mean=0.0096, std=0.0338, NaNs=0
+[  168.5s |  7569.6MB] Computing Mahalanobis parameters for residuals shape=(258790, 56)
+[  168.6s |  7569.6MB] Mahalanobis prepared (cov regularized).
+[  169.5s |  7569.6MB] md_score_val: shape=(138820,), dtype=float64, min=1.1328, max=259.4289, mean=5.7982, std=6.9516, NaNs=0
+[  169.5s |  7569.6MB] Fitting GMM: residuals shape=(258790, 56), PCA_dim=12, components=3
+[  170.7s |  7569.8MB] PCA residuals shape: (258790, 12)
+[  174.7s |  7615.9MB] GMM fitted.
+[  174.9s |  7665.7MB] gmm_score_val: shape=(138820,), dtype=float64, min=-34.0499, max=923.3996, mean=-20.2548, std=16.2486, NaNs=0
+[  181.7s |  7684.3MB] X_val_lat: shape=(138820, 32), dtype=float32, min=0.0000, max=35.2519, mean=2.9520, std=4.0403, NaNs=0
+[  211.7s |  7697.2MB] lat_prob_val: shape=(138820,), dtype=float64, min=0.0000, max=1.0000, mean=0.0677, std=0.2196, NaNs=0
+[  226.5s |  7714.1MB] iso_score_val: shape=(138820,), dtype=float64, min=0.3312, max=0.7870, mean=0.3863, std=0.0588, NaNs=0
+[  226.5s |  7714.1MB] XGB pos_weight=13.7304
+[  233.6s |  7857.6MB] xgb_prob_val: shape=(138820,), dtype=float32, min=0.0000, max=1.0000, mean=0.0679, std=0.2515, NaNs=0
+[  233.6s |  7857.6MB] hybrid_val: shape=(138820,), dtype=float64, min=-0.4346, max=44.9908, mean=0.0000, std=0.9649, NaNs=0
+[  265.6s |  8055.5MB] Cluster 0 count=29312 hybrid_mean=-0.1855 hybrid_std=0.4500
+[  265.6s |  8055.5MB] Cluster 1 count=18304 hybrid_mean=0.2195 hybrid_std=1.1253
+[  265.6s |  8055.5MB] Cluster 2 count=11347 hybrid_mean=1.9936 hybrid_std=2.9179
+[  265.6s |  8055.5MB] Cluster 3 count=18034 hybrid_mean=-0.1130 hybrid_std=0.9519
+[  265.6s |  8055.5MB] Cluster 4 count=53016 hybrid_mean=0.1461 hybrid_std=0.6631
+[  265.6s |  8055.5MB] Cluster 5 count=128777 hybrid_mean=-0.2090 hybrid_std=0.3980
+[  265.6s |  8055.5MB] Fold 1 meta feature matrix shape: (138820, 5)
+[  265.6s |  8055.5MB] 
+==============================
+Fold 2/3
+==============================
+[  265.7s |  8055.5MB] Fold train shape=(277639, 56), val shape=(138819, 56)
+[  265.7s |  8055.5MB] Fold class dist train=[258791  18848], val=[129395   9424]
+[  266.1s |  8066.6MB] Fold AE normal train=(232911, 56), normal val=(25880, 56)
+[  266.1s |  8066.6MB] Building AE (input_dim=56, latent_dim=32, width=128, dropout=0.25)
+[  266.1s |  8066.6MB] AE built successfully.
+[  266.5s |  8265.5MB] AE training started
+[  275.9s |  8078.3MB] Epoch 001/60 loss=0.196820 val_loss=0.029278 mae=0.256897 val_mae=0.074515
+[  278.3s |  8084.6MB] Epoch 002/60 loss=0.060573 val_loss=0.020457 mae=0.141098 val_mae=0.064463
+[  280.6s |  8088.6MB] Epoch 003/60 loss=0.053553 val_loss=0.017543 mae=0.134448 val_mae=0.060899
+[  283.0s |  8093.1MB] Epoch 004/60 loss=0.049889 val_loss=0.015480 mae=0.130127 val_mae=0.058590
+[  285.4s |  8095.7MB] Epoch 005/60 loss=0.047874 val_loss=0.013949 mae=0.127783 val_mae=0.054713
+[  287.8s |  8096.1MB] Epoch 006/60 loss=0.046419 val_loss=0.014000 mae=0.126282 val_mae=0.055326
+[  290.2s |  8097.1MB] Epoch 007/60 loss=0.045427 val_loss=0.012323 mae=0.125397 val_mae=0.050995
+[  292.6s |  8098.7MB] Epoch 008/60 loss=0.044592 val_loss=0.012560 mae=0.124571 val_mae=0.054780
+[  295.0s |  8099.4MB] Epoch 009/60 loss=0.043960 val_loss=0.011491 mae=0.123877 val_mae=0.048905
+[  297.4s |  8099.6MB] Epoch 010/60 loss=0.043307 val_loss=0.011632 mae=0.123175 val_mae=0.051821
+[  299.8s |  8099.8MB] Epoch 011/60 loss=0.043039 val_loss=0.010628 mae=0.123071 val_mae=0.047804
+[  302.3s |  8100.1MB] Epoch 012/60 loss=0.042615 val_loss=0.010806 mae=0.122460 val_mae=0.049453
+[  304.8s |  8100.3MB] Epoch 013/60 loss=0.042401 val_loss=0.010644 mae=0.122095 val_mae=0.048842
+[  307.3s |  8100.4MB] Epoch 014/60 loss=0.042081 val_loss=0.010658 mae=0.121734 val_mae=0.048729
+[  309.8s |  8101.6MB] Epoch 015/60 loss=0.041971 val_loss=0.010110 mae=0.121662 val_mae=0.045586
+[  312.3s |  8101.7MB] Epoch 016/60 loss=0.041555 val_loss=0.010327 mae=0.121366 val_mae=0.047863
+[  314.7s |  8102.8MB] Epoch 017/60 loss=0.041245 val_loss=0.010040 mae=0.120895 val_mae=0.045583
+[  317.2s |  8104.4MB] Epoch 018/60 loss=0.041185 val_loss=0.009885 mae=0.120798 val_mae=0.046371
+[  319.6s |  8104.4MB] Epoch 019/60 loss=0.041092 val_loss=0.009930 mae=0.120675 val_mae=0.045722
+[  322.0s |  8104.7MB] Epoch 020/60 loss=0.040652 val_loss=0.010288 mae=0.120095 val_mae=0.050125
+[  324.4s |  8104.8MB] Epoch 021/60 loss=0.040501 val_loss=0.009691 mae=0.119765 val_mae=0.046606
+[  326.8s |  8104.8MB] Epoch 022/60 loss=0.040598 val_loss=0.009807 mae=0.119748 val_mae=0.047697
+[  329.2s |  8104.9MB] Epoch 023/60 loss=0.040230 val_loss=0.009485 mae=0.119587 val_mae=0.045024
+[  331.6s |  8104.9MB] Epoch 024/60 loss=0.040222 val_loss=0.009767 mae=0.119347 val_mae=0.046838
+[  334.0s |  8104.9MB] Epoch 025/60 loss=0.040109 val_loss=0.009429 mae=0.119014 val_mae=0.045004
+[  336.4s |  8105.1MB] Epoch 026/60 loss=0.039945 val_loss=0.009366 mae=0.118710 val_mae=0.045426
+[  338.8s |  8106.2MB] Epoch 027/60 loss=0.039858 val_loss=0.009575 mae=0.118605 val_mae=0.045535
+[  341.2s |  8106.1MB] Epoch 028/60 loss=0.039859 val_loss=0.009172 mae=0.118497 val_mae=0.045677
+[  343.6s |  8106.2MB] Epoch 029/60 loss=0.039672 val_loss=0.009381 mae=0.118332 val_mae=0.044290
+[  346.0s |  8106.2MB] Epoch 030/60 loss=0.039696 val_loss=0.009080 mae=0.118476 val_mae=0.045104
+[  348.4s |  8106.2MB] Epoch 031/60 loss=0.039639 val_loss=0.009219 mae=0.118359 val_mae=0.044583
+[  350.8s |  8106.6MB] Epoch 032/60 loss=0.039436 val_loss=0.009362 mae=0.118119 val_mae=0.045333
+[  353.2s |  8106.7MB] Epoch 033/60 loss=0.038628 val_loss=0.008109 mae=0.116977 val_mae=0.037793
+[  355.6s |  8106.7MB] Epoch 034/60 loss=0.038592 val_loss=0.007983 mae=0.116744 val_mae=0.039840
+[  357.9s |  8108.6MB] Epoch 035/60 loss=0.038637 val_loss=0.007982 mae=0.116885 val_mae=0.038053
+[  360.3s |  8108.6MB] Epoch 036/60 loss=0.038582 val_loss=0.007996 mae=0.116728 val_mae=0.037994
+[  362.6s |  8108.7MB] Epoch 037/60 loss=0.038553 val_loss=0.007996 mae=0.116750 val_mae=0.037683
+[  365.0s |  8108.8MB] Epoch 038/60 loss=0.038473 val_loss=0.008138 mae=0.116588 val_mae=0.040149
+[  367.4s |  8108.7MB] Epoch 039/60 loss=0.038270 val_loss=0.007490 mae=0.116220 val_mae=0.036305
+[  369.8s |  8108.7MB] Epoch 040/60 loss=0.038180 val_loss=0.007487 mae=0.116135 val_mae=0.036819
+[  372.2s |  8108.8MB] Epoch 041/60 loss=0.038103 val_loss=0.007530 mae=0.116084 val_mae=0.036608
+[  374.6s |  8108.8MB] Epoch 042/60 loss=0.038018 val_loss=0.007496 mae=0.115971 val_mae=0.037074
+[  377.0s |  8108.9MB] Epoch 043/60 loss=0.038040 val_loss=0.007599 mae=0.115839 val_mae=0.037761
+[  379.3s |  8108.9MB] Epoch 044/60 loss=0.037900 val_loss=0.007423 mae=0.115668 val_mae=0.034987
+[  381.7s |  8109.7MB] Epoch 045/60 loss=0.037860 val_loss=0.007301 mae=0.115677 val_mae=0.035417
+[  384.1s |  8109.7MB] Epoch 046/60 loss=0.037781 val_loss=0.007354 mae=0.115625 val_mae=0.034647
+[  386.5s |  8109.7MB] Epoch 047/60 loss=0.037811 val_loss=0.007372 mae=0.115541 val_mae=0.035517
+[  388.9s |  8111.2MB] Epoch 048/60 loss=0.037780 val_loss=0.007324 mae=0.115577 val_mae=0.034821
+[  391.3s |  8111.3MB] Epoch 049/60 loss=0.037859 val_loss=0.007310 mae=0.115603 val_mae=0.034864
+[  393.7s |  8111.3MB] Epoch 050/60 loss=0.037888 val_loss=0.007285 mae=0.115513 val_mae=0.034328
+[  396.1s |  8111.4MB] Epoch 051/60 loss=0.037667 val_loss=0.007262 mae=0.115422 val_mae=0.034617
+[  398.5s |  8111.9MB] Epoch 052/60 loss=0.037713 val_loss=0.007373 mae=0.115468 val_mae=0.035115
+[  400.9s |  8111.9MB] Epoch 053/60 loss=0.037721 val_loss=0.007343 mae=0.115438 val_mae=0.035094
+[  403.2s |  8111.9MB] Epoch 054/60 loss=0.037689 val_loss=0.007340 mae=0.115368 val_mae=0.034812
+[  405.6s |  8112.1MB] Epoch 055/60 loss=0.037650 val_loss=0.007233 mae=0.115357 val_mae=0.034518
+[  408.0s |  8112.1MB] Epoch 056/60 loss=0.037586 val_loss=0.007406 mae=0.115313 val_mae=0.035381
+[  410.4s |  8112.4MB] Epoch 057/60 loss=0.037812 val_loss=0.007301 mae=0.115371 val_mae=0.034655
+[  412.8s |  8112.4MB] Epoch 058/60 loss=0.037689 val_loss=0.007244 mae=0.115355 val_mae=0.034609
+[  415.2s |  8112.5MB] Epoch 059/60 loss=0.037658 val_loss=0.007281 mae=0.115298 val_mae=0.034650
+[  417.6s |  8112.7MB] Epoch 060/60 loss=0.037643 val_loss=0.007290 mae=0.115331 val_mae=0.034605
+[  417.6s |  8112.7MB] AE training finished
+[  417.6s |  8013.1MB] AE fold training time: 151.5s
+[  425.5s |  8158.3MB] val_residuals: shape=(138819, 56), dtype=float64, min=-4.4465, max=6.0019, mean=0.0016, std=0.0996, NaNs=0
+[  425.5s |  8158.3MB] recon_mse: shape=(138819,), dtype=float64, min=0.0002, max=2.1016, mean=0.0099, std=0.0348, NaNs=0
+[  439.1s |  8163.5MB] Computing Mahalanobis parameters for residuals shape=(258791, 56)
+[  439.2s |  8163.6MB] Mahalanobis prepared (cov regularized).
+[  440.0s |  8163.5MB] md_score_val: shape=(138819,), dtype=float64, min=1.1062, max=511.9812, mean=5.6900, std=6.9912, NaNs=0
+[  440.0s |  8163.5MB] Fitting GMM: residuals shape=(258791, 56), PCA_dim=12, components=3
+[  441.4s |  8207.0MB] PCA residuals shape: (258791, 12)
+[  450.8s |  8212.6MB] GMM fitted.
+[  450.9s |  8169.0MB] gmm_score_val: shape=(138819,), dtype=float64, min=-41.8501, max=584.4637, mean=-22.3706, std=16.8508, NaNs=0
+[  457.9s |  8051.6MB] X_val_lat: shape=(138819, 32), dtype=float32, min=0.0000, max=35.6892, mean=3.2828, std=4.7222, NaNs=0
+[  484.9s |  8115.4MB] lat_prob_val: shape=(138819,), dtype=float64, min=0.0000, max=1.0000, mean=0.0703, std=0.2178, NaNs=0
+[  499.7s |  8139.3MB] iso_score_val: shape=(138819,), dtype=float64, min=0.3332, max=0.7800, mean=0.3865, std=0.0581, NaNs=0
+[  499.7s |  8139.3MB] XGB pos_weight=13.7304
+[  507.3s |  8244.8MB] xgb_prob_val: shape=(138819,), dtype=float32, min=0.0000, max=1.0000, mean=0.0679, std=0.2516, NaNs=0
+[  507.3s |  8244.8MB] hybrid_val: shape=(138819,), dtype=float64, min=-0.4297, max=48.5286, mean=-0.0000, std=0.9587, NaNs=0
+[  538.4s |  8245.9MB] Cluster 0 count=102336 hybrid_mean=-0.2703 hybrid_std=0.2276
+[  538.4s |  8245.9MB] Cluster 1 count=63085 hybrid_mean=0.5085 hybrid_std=1.5947
+[  538.4s |  8245.9MB] Cluster 2 count=29412 hybrid_mean=-0.1830 hybrid_std=0.2614
+[  538.4s |  8245.9MB] Cluster 3 count=18258 hybrid_mean=-0.1962 hybrid_std=0.2873
+[  538.4s |  8245.9MB] Cluster 4 count=34969 hybrid_mean=0.0015 hybrid_std=0.8107
+[  538.4s |  8245.9MB] Cluster 5 count=10731 hybrid_mean=0.4188 hybrid_std=1.3707
+[  538.4s |  8245.9MB] Fold 2 meta feature matrix shape: (138819, 5)
+[  538.4s |  8245.9MB] 
+==============================
+Fold 3/3
+==============================
+[  538.5s |  8246.0MB] Fold train shape=(277639, 56), val shape=(138819, 56)
+[  538.5s |  8246.0MB] Fold class dist train=[258791  18848], val=[129395   9424]
+[  538.9s |  8358.1MB] Fold AE normal train=(232911, 56), normal val=(25880, 56)
+[  538.9s |  8358.1MB] Building AE (input_dim=56, latent_dim=32, width=128, dropout=0.25)
+[  538.9s |  8358.1MB] AE built successfully.
+[  539.2s |  8557.2MB] AE training started
+[  548.3s |  8211.7MB] Epoch 001/60 loss=0.188083 val_loss=0.027602 mae=0.252636 val_mae=0.071040
+[  550.7s |  8214.7MB] Epoch 002/60 loss=0.057390 val_loss=0.020600 mae=0.136644 val_mae=0.062370
+[  553.1s |  8217.9MB] Epoch 003/60 loss=0.050431 val_loss=0.016578 mae=0.128881 val_mae=0.054441
+[  555.5s |  8220.7MB] Epoch 004/60 loss=0.047180 val_loss=0.014347 mae=0.125056 val_mae=0.050234
+[  557.9s |  8222.1MB] Epoch 005/60 loss=0.045220 val_loss=0.013620 mae=0.122900 val_mae=0.049913
+[  560.3s |  8225.1MB] Epoch 006/60 loss=0.043637 val_loss=0.012966 mae=0.121382 val_mae=0.050237
+[  562.7s |  8225.9MB] Epoch 007/60 loss=0.042575 val_loss=0.011719 mae=0.119917 val_mae=0.046852
+[  565.0s |  8226.9MB] Epoch 008/60 loss=0.041908 val_loss=0.012213 mae=0.119137 val_mae=0.047951
+[  567.5s |  8228.0MB] Epoch 009/60 loss=0.041170 val_loss=0.010951 mae=0.118537 val_mae=0.046514
+[  569.9s |  8228.4MB] Epoch 010/60 loss=0.040481 val_loss=0.010761 mae=0.117961 val_mae=0.045773
+[  572.3s |  8228.5MB] Epoch 011/60 loss=0.040184 val_loss=0.010063 mae=0.117573 val_mae=0.043614
+[  574.6s |  8228.7MB] Epoch 012/60 loss=0.039757 val_loss=0.009667 mae=0.117264 val_mae=0.043608
+[  577.0s |  8228.9MB] Epoch 013/60 loss=0.039708 val_loss=0.009636 mae=0.117092 val_mae=0.043870
+[  579.4s |  8229.0MB] Epoch 014/60 loss=0.039240 val_loss=0.009254 mae=0.116591 val_mae=0.041936
+[  581.8s |  8229.6MB] Epoch 015/60 loss=0.039007 val_loss=0.009124 mae=0.116216 val_mae=0.043239
+[  584.2s |  8229.7MB] Epoch 016/60 loss=0.038757 val_loss=0.009051 mae=0.115894 val_mae=0.041101
+[  586.6s |  8229.9MB] Epoch 017/60 loss=0.038553 val_loss=0.009011 mae=0.115571 val_mae=0.041339
+[  589.0s |  8229.9MB] Epoch 018/60 loss=0.038526 val_loss=0.008835 mae=0.115505 val_mae=0.041750
+[  591.4s |  8230.4MB] Epoch 019/60 loss=0.038245 val_loss=0.008835 mae=0.115279 val_mae=0.041095
+[  593.8s |  8230.4MB] Epoch 020/60 loss=0.038040 val_loss=0.008405 mae=0.114806 val_mae=0.040141
+[  596.2s |  8230.5MB] Epoch 021/60 loss=0.037803 val_loss=0.008421 mae=0.114393 val_mae=0.040263
+[  598.6s |  8230.6MB] Epoch 022/60 loss=0.037846 val_loss=0.008809 mae=0.114147 val_mae=0.040551
+[  600.9s |  8231.2MB] Epoch 023/60 loss=0.037717 val_loss=0.008330 mae=0.114043 val_mae=0.039701
+[  603.2s |  8231.1MB] Epoch 024/60 loss=0.037359 val_loss=0.008710 mae=0.113635 val_mae=0.040458
+[  605.6s |  8231.4MB] Epoch 025/60 loss=0.036727 val_loss=0.007711 mae=0.112398 val_mae=0.035212
+[  608.0s |  8231.4MB] Epoch 026/60 loss=0.036497 val_loss=0.007746 mae=0.112098 val_mae=0.036280
+[  610.4s |  8231.4MB] Epoch 027/60 loss=0.036589 val_loss=0.007649 mae=0.112184 val_mae=0.035392
+[  612.8s |  8232.5MB] Epoch 028/60 loss=0.036491 val_loss=0.007626 mae=0.112051 val_mae=0.036542
+[  615.3s |  8232.5MB] Epoch 029/60 loss=0.036392 val_loss=0.007524 mae=0.111878 val_mae=0.035728
+[  617.9s |  8232.6MB] Epoch 030/60 loss=0.036260 val_loss=0.007504 mae=0.111661 val_mae=0.035330
+[  620.3s |  8232.6MB] Epoch 031/60 loss=0.036431 val_loss=0.007518 mae=0.111810 val_mae=0.035208
+[  622.8s |  8232.7MB] Epoch 032/60 loss=0.036195 val_loss=0.007564 mae=0.111629 val_mae=0.034530
+[  625.2s |  8232.9MB] Epoch 033/60 loss=0.036248 val_loss=0.007747 mae=0.111507 val_mae=0.036985
+[  627.7s |  8233.1MB] Epoch 034/60 loss=0.035789 val_loss=0.007235 mae=0.110828 val_mae=0.034100
+[  630.1s |  8233.2MB] Epoch 035/60 loss=0.035873 val_loss=0.007050 mae=0.110882 val_mae=0.033028
+[  632.5s |  8234.1MB] Epoch 036/60 loss=0.035805 val_loss=0.007088 mae=0.110765 val_mae=0.033785
+[  634.9s |  8234.1MB] Epoch 037/60 loss=0.035595 val_loss=0.006998 mae=0.110532 val_mae=0.033435
+[  637.3s |  8234.1MB] Epoch 038/60 loss=0.035799 val_loss=0.006915 mae=0.110694 val_mae=0.033695
+[  639.7s |  8234.2MB] Epoch 039/60 loss=0.035693 val_loss=0.006886 mae=0.110568 val_mae=0.033102
+[  642.1s |  8234.4MB] Epoch 040/60 loss=0.035629 val_loss=0.006782 mae=0.110526 val_mae=0.032611
+[  644.5s |  8234.2MB] Epoch 041/60 loss=0.035666 val_loss=0.006969 mae=0.110443 val_mae=0.034124
+[  646.9s |  8234.2MB] Epoch 042/60 loss=0.035654 val_loss=0.007116 mae=0.110408 val_mae=0.033895
+[  649.3s |  8234.4MB] Epoch 043/60 loss=0.035601 val_loss=0.006930 mae=0.110475 val_mae=0.033223
+[  651.7s |  8234.5MB] Epoch 044/60 loss=0.035576 val_loss=0.006982 mae=0.110331 val_mae=0.033189
+[  654.1s |  8234.5MB] Epoch 045/60 loss=0.035536 val_loss=0.006722 mae=0.110085 val_mae=0.032553
+[  656.5s |  8234.5MB] Epoch 046/60 loss=0.035329 val_loss=0.006664 mae=0.109920 val_mae=0.032366
+[  658.9s |  8234.5MB] Epoch 047/60 loss=0.035475 val_loss=0.006765 mae=0.110011 val_mae=0.033100
+[  661.3s |  8234.5MB] Epoch 048/60 loss=0.035305 val_loss=0.006781 mae=0.109958 val_mae=0.032832
+[  663.6s |  8234.5MB] Epoch 049/60 loss=0.035272 val_loss=0.006737 mae=0.109924 val_mae=0.032873
+[  666.0s |  8234.5MB] Epoch 050/60 loss=0.035384 val_loss=0.006709 mae=0.109896 val_mae=0.032812
+[  668.5s |  8234.5MB] Epoch 051/60 loss=0.035190 val_loss=0.006683 mae=0.109600 val_mae=0.032770
+[  670.9s |  8234.5MB] Epoch 052/60 loss=0.035059 val_loss=0.006733 mae=0.109529 val_mae=0.033002
+[  673.3s |  8234.5MB] Epoch 053/60 loss=0.035300 val_loss=0.006715 mae=0.109744 val_mae=0.032924
+[  675.6s |  8234.6MB] Epoch 054/60 loss=0.035090 val_loss=0.006693 mae=0.109565 val_mae=0.033051
+[  675.6s |  8234.5MB] AE training finished
+[  675.7s |  8135.0MB] AE fold training time: 136.7s
+[  683.4s |  8224.4MB] val_residuals: shape=(138819, 56), dtype=float64, min=-4.3325, max=6.0033, mean=0.0017, std=0.1048, NaNs=0
+[  683.4s |  8224.4MB] recon_mse: shape=(138819,), dtype=float64, min=0.0001, max=1.4701, mean=0.0110, std=0.0362, NaNs=0
+[  696.9s |  8227.5MB] Computing Mahalanobis parameters for residuals shape=(258791, 56)
+[  697.0s |  8227.5MB] Mahalanobis prepared (cov regularized).
+[  697.9s |  8227.5MB] md_score_val: shape=(138819,), dtype=float64, min=1.0698, max=255.3841, mean=6.0935, std=7.9276, NaNs=0
+[  697.9s |  8227.5MB] Fitting GMM: residuals shape=(258791, 56), PCA_dim=12, components=3
+[  699.2s |  8270.9MB] PCA residuals shape: (258791, 12)
+[  709.4s |  8304.0MB] GMM fitted.
+[  709.5s |  8286.0MB] gmm_score_val: shape=(138819,), dtype=float64, min=-42.5376, max=196.8490, mean=-23.0615, std=16.2452, NaNs=0
+[  716.4s |  8325.0MB] X_val_lat: shape=(138819, 32), dtype=float32, min=0.0000, max=34.6886, mean=2.6467, std=3.8485, NaNs=0
+[  744.9s |  8297.9MB] lat_prob_val: shape=(138819,), dtype=float64, min=0.0000, max=1.0000, mean=0.0661, std=0.2107, NaNs=0
+[  759.9s |  8297.9MB] iso_score_val: shape=(138819,), dtype=float64, min=0.3312, max=0.7780, mean=0.3869, std=0.0584, NaNs=0
+[  759.9s |  8297.9MB] XGB pos_weight=13.7304
+[  767.2s |  8322.4MB] xgb_prob_val: shape=(138819,), dtype=float32, min=0.0000, max=1.0000, mean=0.0679, std=0.2515, NaNs=0
+[  767.3s |  8322.4MB] hybrid_val: shape=(138819,), dtype=float64, min=-0.4335, max=32.3455, mean=0.0000, std=0.9725, NaNs=0
+[  798.5s |  8356.1MB] Cluster 0 count=35447 hybrid_mean=0.0249 hybrid_std=0.8719
+[  798.5s |  8356.1MB] Cluster 1 count=11995 hybrid_mean=2.1361 hybrid_std=2.9643
+[  798.5s |  8356.1MB] Cluster 2 count=29237 hybrid_mean=-0.2209 hybrid_std=0.2433
+[  798.5s |  8356.1MB] Cluster 3 count=108746 hybrid_mean=-0.2216 hybrid_std=0.3596
+[  798.5s |  8356.1MB] Cluster 4 count=4066 hybrid_mean=0.3268 hybrid_std=1.3941
+[  798.5s |  8356.1MB] Cluster 5 count=69300 hybrid_mean=0.0393 hybrid_std=0.5826
+[  798.5s |  8356.1MB] Fold 3 meta feature matrix shape: (138819, 5)
+[  798.5s |  8356.1MB] 
+================================
+Meta Ensemble Training
+================================
+[  798.5s |  8356.1MB] oof_X: shape=(416458, 5), dtype=float64, min=-42.5376, max=923.3996, mean=-4.2746, std=11.5005, NaNs=0
+[  798.5s |  8356.1MB] oof_y distribution: [388186  28272]
+[  801.2s |  8356.1MB] oof_meta_prob: shape=(416458,), dtype=float64, min=0.0001, max=1.0000, mean=0.0680, std=0.2515, NaNs=0
+[  801.2s |  8356.1MB] Computing PR-based threshold...
+[  801.3s |  8356.1MB] Target-precision threshold selected: {'kind': 'target_precision_0.95', 'threshold': 0.0014797273712307082, 'precision': 0.9500302439680086, 'recall': 0.9999646293152236, 'f1': 0.9743580906422713}
+[  801.3s |  8356.1MB] Meta threshold selected: {'kind': 'target_precision_0.95', 'threshold': 0.0014797273712307082, 'precision': 0.9500302439680086, 'recall': 0.9999646293152236, 'f1': 0.9743580906422713}
+[  801.3s |  8356.1MB] 
+=========================================
+Final Model Fit (Full Training)
+=========================================
+[  802.2s |  8521.9MB] X_train_norm_s_full: shape=(388186, 56), dtype=float64, min=-2.1660, max=6.0000, mean=-0.0114, std=0.7254, NaNs=0
+[  802.3s |  8671.1MB] Building AE (input_dim=56, latent_dim=32, width=128, dropout=0.25)
+[  802.4s |  8671.1MB] AE built successfully.
+[  802.9s |  8969.7MB] AE training started
+[  814.1s |  8749.1MB] Epoch 001/60 loss=0.148486 val_loss=0.021832 mae=0.215083 val_mae=0.064558
+[  817.7s |  8761.8MB] Epoch 002/60 loss=0.052041 val_loss=0.016710 mae=0.131159 val_mae=0.057227
+[  821.3s |  8765.4MB] Epoch 003/60 loss=0.047101 val_loss=0.014254 mae=0.126009 val_mae=0.052403
+[  824.9s |  8769.3MB] Epoch 004/60 loss=0.044583 val_loss=0.013321 mae=0.123528 val_mae=0.053213
+[  828.6s |  8771.8MB] Epoch 005/60 loss=0.043074 val_loss=0.012604 mae=0.121963 val_mae=0.055089
+[  832.2s |  8773.0MB] Epoch 006/60 loss=0.041912 val_loss=0.010827 mae=0.120603 val_mae=0.047361
+[  835.8s |  8773.8MB] Epoch 007/60 loss=0.041268 val_loss=0.011145 mae=0.119824 val_mae=0.049255
+[  839.4s |  8774.3MB] Epoch 008/60 loss=0.040830 val_loss=0.010327 mae=0.119042 val_mae=0.046063
+[  842.9s |  8774.4MB] Epoch 009/60 loss=0.040202 val_loss=0.010832 mae=0.117957 val_mae=0.051075
+[  846.3s |  8774.5MB] Epoch 010/60 loss=0.039941 val_loss=0.009699 mae=0.117709 val_mae=0.043307
+[  849.9s |  8778.0MB] Epoch 011/60 loss=0.039422 val_loss=0.010240 mae=0.117142 val_mae=0.047655
+[  853.5s |  8779.3MB] Epoch 012/60 loss=0.039123 val_loss=0.010151 mae=0.116640 val_mae=0.047290
+[  857.1s |  8779.3MB] Epoch 013/60 loss=0.038945 val_loss=0.009263 mae=0.116435 val_mae=0.043805
+[  860.7s |  8779.9MB] Epoch 014/60 loss=0.038567 val_loss=0.008792 mae=0.116003 val_mae=0.042448
+[  864.2s |  8782.8MB] Epoch 015/60 loss=0.038497 val_loss=0.009318 mae=0.115832 val_mae=0.045147
+[  867.8s |  8785.0MB] Epoch 016/60 loss=0.038355 val_loss=0.008436 mae=0.115454 val_mae=0.040309
+[  871.5s |  8785.0MB] Epoch 017/60 loss=0.038096 val_loss=0.009456 mae=0.115032 val_mae=0.044568
+[  875.0s |  8785.1MB] Epoch 018/60 loss=0.037998 val_loss=0.008937 mae=0.114894 val_mae=0.045115
+[  878.6s |  8785.1MB] Epoch 019/60 loss=0.037851 val_loss=0.008489 mae=0.114721 val_mae=0.041583
+[  882.2s |  8785.1MB] Epoch 020/60 loss=0.037638 val_loss=0.008515 mae=0.114327 val_mae=0.042462
+[  885.8s |  8785.3MB] Epoch 021/60 loss=0.037064 val_loss=0.008341 mae=0.113435 val_mae=0.040619
+[  889.4s |  8785.3MB] Epoch 022/60 loss=0.036761 val_loss=0.007587 mae=0.113186 val_mae=0.038285
+[  893.0s |  8785.3MB] Epoch 023/60 loss=0.036872 val_loss=0.007825 mae=0.113162 val_mae=0.038624
+[  896.6s |  8785.5MB] Epoch 024/60 loss=0.036760 val_loss=0.007784 mae=0.113024 val_mae=0.038105
+[  900.1s |  8785.6MB] Epoch 025/60 loss=0.036692 val_loss=0.007649 mae=0.112976 val_mae=0.037721
+[  903.7s |  8785.9MB] Epoch 026/60 loss=0.036631 val_loss=0.007545 mae=0.112912 val_mae=0.036286
+[  907.3s |  8785.9MB] Epoch 027/60 loss=0.036143 val_loss=0.007424 mae=0.112162 val_mae=0.036186
+[  911.0s |  8785.9MB] Epoch 028/60 loss=0.036151 val_loss=0.007317 mae=0.112115 val_mae=0.035929
+[  914.6s |  8785.9MB] Epoch 029/60 loss=0.036171 val_loss=0.007124 mae=0.112264 val_mae=0.034298
+[  918.2s |  8786.0MB] Epoch 030/60 loss=0.036135 val_loss=0.007354 mae=0.112182 val_mae=0.036376
+[  921.7s |  8786.0MB] Epoch 031/60 loss=0.036145 val_loss=0.007206 mae=0.112153 val_mae=0.035355
+[  925.4s |  8786.0MB] Epoch 032/60 loss=0.036075 val_loss=0.007300 mae=0.112026 val_mae=0.035934
+[  929.2s |  8786.0MB] Epoch 033/60 loss=0.036184 val_loss=0.007258 mae=0.112182 val_mae=0.035407
+[  932.9s |  8788.3MB] Epoch 034/60 loss=0.035921 val_loss=0.007239 mae=0.111853 val_mae=0.034798
+[  936.5s |  8788.3MB] Epoch 035/60 loss=0.035941 val_loss=0.007023 mae=0.111832 val_mae=0.033732
+[  940.1s |  8789.5MB] Epoch 036/60 loss=0.035821 val_loss=0.007094 mae=0.111629 val_mae=0.034692
+[  943.7s |  8789.5MB] Epoch 037/60 loss=0.035879 val_loss=0.007244 mae=0.111773 val_mae=0.035022
+[  947.3s |  8789.6MB] Epoch 038/60 loss=0.035815 val_loss=0.007228 mae=0.111662 val_mae=0.035578
+[  950.9s |  8790.3MB] Epoch 039/60 loss=0.035794 val_loss=0.006977 mae=0.111714 val_mae=0.033816
+[  954.4s |  8790.4MB] Epoch 040/60 loss=0.035614 val_loss=0.006961 mae=0.111500 val_mae=0.033531
+[  958.1s |  8790.4MB] Epoch 041/60 loss=0.035714 val_loss=0.006908 mae=0.111433 val_mae=0.033242
+[  961.6s |  8790.4MB] Epoch 042/60 loss=0.035647 val_loss=0.006994 mae=0.111419 val_mae=0.033545
+[  965.2s |  8790.4MB] Epoch 043/60 loss=0.035746 val_loss=0.006988 mae=0.111517 val_mae=0.033909
+[  968.8s |  8790.5MB] Epoch 044/60 loss=0.035741 val_loss=0.006921 mae=0.111579 val_mae=0.033617
+[  972.4s |  8790.5MB] Epoch 045/60 loss=0.035766 val_loss=0.007013 mae=0.111478 val_mae=0.033941
+[  975.9s |  8790.5MB] Epoch 046/60 loss=0.035741 val_loss=0.006942 mae=0.111525 val_mae=0.033553
+[  979.5s |  8790.5MB] Epoch 047/60 loss=0.035609 val_loss=0.006908 mae=0.111364 val_mae=0.033377
+[  983.1s |  8790.5MB] Epoch 048/60 loss=0.035750 val_loss=0.006925 mae=0.111456 val_mae=0.033328
+[  986.7s |  8792.4MB] Epoch 049/60 loss=0.035504 val_loss=0.006914 mae=0.111286 val_mae=0.033548
+[  990.2s |  8792.4MB] Epoch 050/60 loss=0.035552 val_loss=0.006899 mae=0.111283 val_mae=0.033190
+[  993.8s |  8792.4MB] Epoch 051/60 loss=0.035581 val_loss=0.006915 mae=0.111254 val_mae=0.033365
+[  997.4s |  8792.5MB] Epoch 052/60 loss=0.035573 val_loss=0.006893 mae=0.111269 val_mae=0.033227
+[ 1001.0s |  8792.5MB] Epoch 053/60 loss=0.035698 val_loss=0.006880 mae=0.111336 val_mae=0.033118
+[ 1004.4s |  8793.0MB] Epoch 054/60 loss=0.035553 val_loss=0.006875 mae=0.111263 val_mae=0.033175
+[ 1007.9s |  8793.0MB] Epoch 055/60 loss=0.035483 val_loss=0.006901 mae=0.111236 val_mae=0.033338
+[ 1011.4s |  8793.4MB] Epoch 056/60 loss=0.035572 val_loss=0.006846 mae=0.111230 val_mae=0.033064
+[ 1015.0s |  8793.3MB] Epoch 057/60 loss=0.035560 val_loss=0.006845 mae=0.111239 val_mae=0.032970
+[ 1018.6s |  8793.3MB] Epoch 058/60 loss=0.035720 val_loss=0.006844 mae=0.111339 val_mae=0.033144
+[ 1022.1s |  8793.4MB] Epoch 059/60 loss=0.035624 val_loss=0.006877 mae=0.111305 val_mae=0.033144
+[ 1025.7s |  8793.5MB] Epoch 060/60 loss=0.035498 val_loss=0.006849 mae=0.111231 val_mae=0.032953
+[ 1025.7s |  8793.5MB] AE training finished
+[ 1048.7s |  9129.8MB] Computing Mahalanobis parameters for residuals shape=(388186, 56)
+[ 1048.9s |  9129.8MB] Mahalanobis prepared (cov regularized).
+[ 1048.9s |  9129.8MB] Fitting GMM: residuals shape=(388186, 56), PCA_dim=12, components=3
+[ 1050.8s |  9210.1MB] PCA residuals shape: (388186, 12)
+[ 1069.0s |  9187.6MB] GMM fitted.
+[ 1094.1s |  9185.1MB] Final cluster 0 threshold=1.480026 count=44093
+[ 1094.1s |  9185.1MB] Final cluster 1 threshold=5.385564 count=62971
+[ 1094.1s |  9185.1MB] Final cluster 2 threshold=10.202004 count=27691
+[ 1094.1s |  9185.1MB] Final cluster 3 threshold=13.118890 count=6036
+[ 1094.2s |  9185.1MB] Final cluster 4 threshold=0.445703 count=153188
+[ 1094.2s |  9185.1MB] Final cluster 5 threshold=10.311817 count=94207
+[ 1094.2s |  9185.1MB] POS_WEIGHT full=13.7304
+[ 1149.3s |  9662.4MB] 
+===============================
+Inference on Test Set
+===============================
+[ 1157.7s |  9838.5MB] hybrid_test: shape=(138820,), dtype=float64, min=-0.4206, max=42.0501, mean=0.0000, std=0.9673, NaNs=0
+[ 1178.8s |  9898.0MB] meta_X_test: shape=(138820, 5), dtype=float64, min=-40.2682, max=255.4900, mean=-4.3499, std=11.4324, NaNs=0
+[ 1179.2s |  9898.0MB] [AE per-cluster] Acc=0.9293 Prec=0.0025 Rec=0.0001 F1=0.0002 AP=0.5657 AUC=0.9484
+[ 1179.5s |  9898.0MB] [Meta Ensemble] Acc=0.9968 Prec=0.9544 Rec=1.0000 F1=0.9767 AP=1.0000 AUC=1.0000
+[ 1179.8s |  9898.0MB] Classification report (Meta):
+              precision    recall  f1-score   support
+
+      Normal       1.00      1.00      1.00    129396
+      Attack       0.95      1.00      0.98      9424
+
+    accuracy                           1.00    138820
+   macro avg       0.98      1.00      0.99    138820
+weighted avg       1.00      1.00      1.00    138820
+
+
+[ 1180.0s |  9898.0MB] 
+==============================
+Benchmark Comparison
+==============================
+[ 1180.3s |  9898.0MB] Final comparison table:
+            Method  Accuracy  Precision  Recall    F1
+        Paper (AE)     94.00      81.00   99.00 89.00
+      Fernandes RF     98.00      99.00   69.00 81.00
+     Fernandes XGB     96.00      99.00   44.00 61.00
+      Vitorino KNN     98.00      98.00   98.00 98.00
+      Vitorino MLP     90.00      90.00   90.00 89.00
+Our AE per-cluster     92.93       0.25    0.01  0.02
+ Our Meta Ensemble     99.68      95.44  100.00 97.67
+
+
