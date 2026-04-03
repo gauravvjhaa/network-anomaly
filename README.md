@@ -2,9 +2,9 @@
 
 This project explores network intrusion detection on the **HIKARI‑2021** encrypted traffic dataset using a hybrid meta‑ensemble of autoencoders, XGBoost, Isolation Forest, and a final stacked meta-classifier.
 
-## Data Preprocessing
+## Approach
 
-![Data Approch](data_approach.png)
+![Approch](header.png)
 
 
 
